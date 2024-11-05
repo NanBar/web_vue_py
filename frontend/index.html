@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <!-- <script src="src/assets/zoom.js"></script> -->
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+  <body>
+    <div id="aBUTTon">
+      <h1>{{ message }}</h1>
+      <button @click="buttonClick">Click me</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+      new Vue({
+        el: '#aBUTTon',
+        data: {
+          message: 'Hello from Vue.js!'
+        },
+        methods: {
+          buttonClick() {
+            window.pywebview.api.on_button_click()
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
